@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Крок до Успіху</title>
+  
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      
+      background:
+        url('./louis-vuitton.jpg') no-repeat center/cover;
+      background-attachment: fixed;
+      
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      min-height: 80vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(32,32,32,0.8)),
+        url('./1663364709_5-zefirka-club-p-oboi-skrudzh-makdak-v-zolote-5.jpg') 
+          no-repeat center/cover;
+    }
+    header .header-content {
+      max-width: 800px;
+      padding: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0; 
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 100%
+      );
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ffd900; 
+      text-shadow: 2px 2px 6px rgba(0, 0, 1, 0.5);
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #f0f0f0;
+    }
+    header button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    header button:hover {
+      background: #ffc107;
+    }
+
+    .about {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      text-align: center;
+
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+        url("./about-bg.jpg") no-repeat center/cover;
+      background-attachment: fixed; 
+      background-size: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(255,215,0,0.2);
+      margin-top: 2rem; 
+    }
+    .about h2 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      line-height: 1.6;
+      color: #f0f0f0;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+   .advantages {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .advantage {
+      flex: 1 1 250px;
+      background: #1f1f1f; 
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255,215,0,0.2);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #f0f0f0;
+    }
+    .advantage:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(255,215,0,0.4);
+    }
+    .advantage h3 {
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+
+    .form-section {
+      padding: 2rem 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+    .form-section p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #dcdcdc;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(255,215,0,0.2);
+    }
+    label {
+      font-weight: bold;
+      color: #f8f8f8;
+    }
+    input, select, textarea {
+      padding: 0.6rem;
+      border: 1px solid #666;
+      border-radius: 4px;
+      font-size: 1rem;
+      background: #2c2c2c;
+      color: #fff;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
+    }
+    .form-section button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 4px;
+      background: #ffd700;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .form-section button:hover {
+      background: #ffc107;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1 data-aos="fade-up" data-aos-duration="1000">
+        Крок до Успіху
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+        Відкрий для себе безмежні можливості розвитку та процвітання.
+      </p>
+      <button 
+        data-aos="zoom-in" 
+        data-aos-delay="600" 
+        onclick="scrollToForm()"
+      >
+        Заповнити анкету
+      </button>
+    </div>
+  </header>
+
+  <section class="about" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Про нас</h2>
+    <p>
+      Ми — команда однодумців, яка прагне розкрити потенціал кожного талановитого фахівця.
+      Наша мета — створити умови, де кожен отримує підтримку, мотивацію й перспективи 
+      для професійного та особистісного зростання. Приєднуйтесь до нас, щоб разом 
+      досягати нових горизонтів успіху!
+    </p>
+  </section>
+
+  <section class="advantages">
+    <div class="advantage" data-aos="fade-right" data-aos-duration="800">
+      <h3>Визнання</h3>
+      <p>У нас цінують найкращих. Долучайся до лідерів у своїй галузі.</p>
+    </div>
+
+    <div class="advantage" data-aos="fade-up" data-aos-duration="800">
+      <h3>Зростання доходів</h3>
+      <p>Постійна підтримка і реальні перспективи збільшити свій капітал.</p>
+    </div>
+
+    <div class="advantage" data-aos="fade-left" data-aos-duration="800">
+      <h3>Елітне середовище</h3>
+      <p>Працюй серед професіоналів і переймай досвід у найуспішніших.</p>
+    </div>
+
+    <div class="advantage" data-aos="flip-left" data-aos-duration="800">
+      <h3>Житло від компаіі</h3>
+      <p>Якщо ви з іншого міста, можете не перейматись)</p>
+    </div>
+
+    <div class="advantage" data-aos="flip-up" data-aos-duration="800">
+      <h3>Відпочінок</h3>
+      <p>Корпоративи за рахунок компанії.</p>
+    </div>
+
+    <div class="advantage" data-aos="flip-right" data-aos-duration="800">
+      <h3>Дружній коллектив</h3>
+      <p>Який завжди підтримае, та допоможе в будья якій ситуації.</p>
+    </div>
+  </section>
+
+  <section class="form-section" id="formSection">
+    <h2 data-aos="fade-down" data-aos-duration="800">Приєднатися</h2>
+    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      Заповніть анкету та зробіть перший крок до успішного життя.
+    </p>
+
+    <form 
+      onsubmit="return submitForm(event)" 
+      data-aos="fade-up" 
+      data-aos-duration="1000" 
+      data-aos-delay="400"
+    >
+      <label for="name">Ваше ім'я:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Скільки вам повних років?</label>
+      <input 
+        type="text" 
+        id="email" 
+        name="email" 
+        required 
+        placeholder="Наприклад, 25"
+      />
+
+      <label for="city">Місто, в якому хотіли б працювати:</label>
+<select id="city" name="city" required>
+  <option value="" disabled selected>Оберіть місто</option>
+  <option value="Київ">Київ</option>
+  <option value="Львів">Львів</option>
+  <option value="Умань">Умань</option>
+  <option value="Вінниця">Вінниця</option>
+  <option value="Дніпро">Дніпро</option>
+  <option value="Александрія">Александрія</option>
+  <option value="Черкасси">Черкасси</option>
+  <option value="Житомир">Житомир</option>
+</select>
+
+      <label for="phone">Номер телефону:</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        required 
+        placeholder="+380 (__) ___ __ __" 
+      />
+
+      <label for="telegram">Нік у Telegram (без @):</label>
+      <input 
+        type="text" 
+        id="telegram" 
+        name="telegram" 
+        placeholder="Наприклад, username" 
+      />
+
+      <label for="message">Розкажіть про себе:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Не обов'язково"></textarea>
+
+      <button type="submit">Відправити</button>
+    </form>
+  </section>
+
+  <footer data-aos="fade-in" data-aos-duration="800">
+    <p>© 2025 Крок до Успіху. Всі права захищені.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(); 
+
+    const BOT_TOKEN = "7146179114:AAFWPd0N9v50aIOv8bjIx12vWHs3aSMoIIs"; 
+    const CHAT_ID = "-1002649869453";
+
+    function scrollToForm() {
+      document.getElementById("formSection").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const age = document.getElementById("email").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const telegram = document.getElementById("telegram").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const dateTime = new Date().toLocaleString("uk-UA", {
+        timeZone: "Europe/Kiev",
+      });
+
+      const textToSend = `
+Нова заявка від: ${name}
+Повних років: ${age}
+Місто: ${city}
+Телефон: ${phone}
+Telegram: @${telegram}
+Повідомлення: ${message}
+
+Дата і час відправлення: ${dateTime}
+`.trim();
+
+      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(textToSend)}`;
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Помилка при надсиланні в Telegram");
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.ok) {
+            alert("Заявку успішно надіслано!");
+            event.target.reset();
+          } else {
+            alert("Помилка при надсиланні, сбробуйте пізніше.");
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          alert("Не вдалося надіслати заявку.");
+        });
+
+      return false;
+    }
+  </script>
+</body>
+</html>
